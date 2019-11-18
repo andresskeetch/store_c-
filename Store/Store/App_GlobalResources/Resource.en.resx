@@ -147,4 +147,13 @@
   <data name="AccountLoginWelcome" xml:space="preserve">
     <value>Welcome Back!</value>
   </data>
+  <data name="AccountLogOutMessage" xml:space="preserve">
+    <value>Select "Logout" below if you are ready to end your current session.</value>
+  </data>
+  <data name="GlobalCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="GlobalLogOut" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
 </root>

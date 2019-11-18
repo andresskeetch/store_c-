@@ -149,5 +149,32 @@ namespace Resources {
                 return ResourceManager.GetString("AccountLoginWelcome", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seleccione &quot;Cerrar Sesión&quot; si esta listo para terminar la sesión..
+        /// </summary>
+        internal static string AccountLogOutMessage {
+            get {
+                return ResourceManager.GetString("AccountLogOutMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cancelar.
+        /// </summary>
+        internal static string GlobalCancel {
+            get {
+                return ResourceManager.GetString("GlobalCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cerrar Sesión.
+        /// </summary>
+        internal static string GlobalLogOut {
+            get {
+                return ResourceManager.GetString("GlobalLogOut", resourceCulture);
+            }
+        }
     }
 }

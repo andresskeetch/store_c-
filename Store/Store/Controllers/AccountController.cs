@@ -22,6 +22,11 @@ namespace Store.Controllers
             if (ModelState.IsValid)
             {
                 SetAuthCookie(model);
+                if (!string.IsNullOrEmpty(ReturnUrl))
+                {
+                    return View(ReturnUrl);
+                }
+                return RedirectToAction("index", "home");
             }
             return View();
         }
@@ -29,6 +34,15 @@ namespace Store.Controllers
         private void SetAuthCookie(LoginViewModel model)
         {
             Response.Cookies.Add(Helpers.Security.SetAuthCookie(model));
+        }
+        public ActionResult LogOut()
+        {
+            Response.Cookies.Clear();
+            Session.Clear();
+            Session.Abandon();
+            Session.RemoveAll();
+            FormsAuthentication.SignOut();
+            return RedirectToAction("index", "account");
         }
     }
 
