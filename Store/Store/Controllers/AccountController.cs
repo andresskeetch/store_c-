@@ -37,6 +37,7 @@ namespace Store.Controllers
         }
         public ActionResult LogOut()
         {
+            //Clear Session;
             Response.Cookies.Clear();
             Session.Clear();
             Session.Abandon();

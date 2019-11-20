@@ -13,6 +13,8 @@
 
 </head>
 <body id="page-top">
+    @*<div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v5.0&appId=937654663272509"></script>*@
     @if (Request.IsAuthenticated)
     {
         <div id="wrapper">
@@ -266,7 +268,7 @@
                             <!-- Nav Item - User Information -->
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">@User.Identity.Name</span>
                                     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                                 </a>
                                 <!-- Dropdown - User Information -->
@@ -328,6 +330,7 @@
     <script src="~/content/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="~/content/js/sb-admin-2.min.js"></script>
+    <script src="~/Content/js/fbConfig.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
